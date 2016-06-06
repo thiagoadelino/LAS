@@ -1,0 +1,20 @@
+
+<ion-header-bar class="bar bar-header bar-dark">
+  <h1 class="title">Plantas por nome</h1>
+</ion-header-bar>
+<ion-content class="padding">
+<label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="search" placeholder="Buscar" ng-model="planta.cientifico" ng-change="searchPlantaDB()">
+  </label>
+	  
+	  <ion-list>
+			<ion-item class="list-dense" ng-repeat="item in plantas | limitTo: 20">
+				
+				<h2><b> {{item.cientifico}} </b></h2>
+				<p>{{item.popular}}</p>
+				<p>{{item.ingles}}</p>
+				
+			</ion-item>
+		</ion-list>
+</ion-content>

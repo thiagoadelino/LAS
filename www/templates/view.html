@@ -1,0 +1,12 @@
+<ion-content class="padding">
+	  
+	  <ion-list>
+			<ion-item class="item-avatar" ng-repeat="item in plantas | limitTo: 20">
+				
+				<h2>Científico: {{item.cientifico}} </h2>
+				<h2>Popular: {{item.popular}}</h2>
+				<p>{{item.ingles}}</p>
+				
+			</ion-item>
+		</ion-list>
+</ion-content>
