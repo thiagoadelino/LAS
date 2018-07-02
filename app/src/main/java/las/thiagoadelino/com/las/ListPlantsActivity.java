@@ -28,9 +28,12 @@ public class ListPlantsActivity extends AppCompatActivity {
         DatabaseConfiguration config = new DatabaseConfiguration(getApplicationContext());
         Database database = null;
 
+
         try {
             System.out.println("creating database");
             database = new Database("myDB", config);
+
+
             System.out.println("database created");
         } catch (CouchbaseLiteException e) {
             e.printStackTrace();
@@ -38,16 +41,14 @@ public class ListPlantsActivity extends AppCompatActivity {
 
         final ListView listView = (ListView) findViewById(R.id.listviewplants);
 
-        Query q = QueryBuilder.select(SelectResult.all()).from(DataSource.database(database));
+        Query q = QueryBuilder.select(SelectResult.property("id"),SelectResult.property("commonName"),SelectResult.property("scientificName")).from(DataSource.database(database));
         final ArrayList<String> result = new ArrayList<String>();
 
         try {
             ResultSet res = q.execute();
 
             for(Result r : res){
-                for(String s: r.getKeys())
-                    System.out.println(s);
-                String scientificName = r.getString("scientificName");
+                String scientificName = r.getString("commonName");
                 System.out.println(scientificName);
                 result.add((scientificName==null)?"":scientificName);
             }

@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        if(database.getCount() > 0)
+            return;
+
         String json = null;
         try {
             System.out.println("retrieving json");
