@@ -4,16 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="las.thiagoadelino.com.las.MainActivity">
-
-    <Button
-        android:id="@+id/button"
+    tools:context="las.thiagoadelino.com.las.ListPlantsActivity">
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listviewplants"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onButtonClick"
-        android:text="Nomes científicos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="104dp" />
-
+        android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>
