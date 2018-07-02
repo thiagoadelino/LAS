@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20px"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:text="nome x"
+        android:textStyle="bold"
+        android:padding="5px"
+        android:id="@+id/nome_cientifico"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nome_cientifico"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:padding="5px"
+        android:text="nome x"
+        android:id="@+id/nome_comum"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nome_comum"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+        android:text="nome x"
+        android:padding="5px"
+        android:id="@+id/nome_ingles"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nome_ingles"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+        android:text="nome x"
+        android:textStyle="italic"
+        android:padding="5px"
+        android:id="@+id/classe"/>
+
+</android.support.constraint.ConstraintLayout>
